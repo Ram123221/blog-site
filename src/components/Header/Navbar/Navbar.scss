@@ -1,0 +1,100 @@
+// @import "../../../App.scss";
+@import "../../../GlobalColors.scss";
+
+#navbar-wrapper{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    #navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2.8rem 1rem;
+        background-color: $grey-white;
+
+        //middle nav
+        .nav-middle{
+            flex-basis: 35%;
+            max-width: 450px;
+            min-width: 380px;
+            text-transform: capitalize;
+            display: none;
+            
+            ul#nav-links{
+                display: flex;
+                list-style-type: none;
+                justify-content: space-between;
+                position: relative;
+
+                li#dropdown-first, li.link-list-item{
+                    position: relative;
+                    cursor: pointer;
+                    padding: 0.7rem;
+                    display: flex;
+
+                    #container-1{
+                        transition: all 0.5s;
+                        position: absolute;
+                        width: 150%;
+                        top: 100%;
+                        display: grid;
+                        z-index: 1;
+
+                        ul#dropdown-first-list{
+                        list-style-type: none;
+                        background-color: $white;
+                        overflow: hidden;
+                        transition: all 0.5s;
+                        
+                            li#dropdown-deep{
+                                position: static;
+
+                                #container-2{
+                                    transition: all 0.5s;
+                                    position: absolute;
+                                    background-color: red;
+                                    right: 100%;
+                                    width: 100%;
+                                    display: grid;
+                                    z-index: 2;
+
+                                    ul#deep-dropdown-list{
+                                    list-style-type: none;
+                                    width: 100%;
+                                    transition: all 0.5s;
+                                    overflow: hidden;
+                                    }
+                                }
+    
+                                }  
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .nav-right{
+            display: flex;
+            align-items: center;
+
+            .icon{
+                padding: 0.7rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (width >=1024px) {
+    #navbar-wrapper{
+
+        #navbar{
+
+            .nav-middle{
+                display: block;
+            }
+        }
+    }
+}
