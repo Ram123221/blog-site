@@ -1,7 +1,7 @@
 import { small_img_text_type } from "../../Data/data"
 
 function SmallImgText({small_img_text}:{small_img_text: small_img_text_type}) {
-  const {id, img_url,date,category,title} = small_img_text;
+  const { img_url,date,category,title} = small_img_text;
   
   return (
     <>

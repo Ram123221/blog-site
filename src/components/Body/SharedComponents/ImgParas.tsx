@@ -1,4 +1,3 @@
-import React from 'react'
 import { img_paras_type } from '../../Data/data';
 
 function ImgParas({part}:{part: img_paras_type}) {
