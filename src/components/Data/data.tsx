@@ -108,7 +108,7 @@ export const Header = {
             id:0,
             heading: "17 Pictures of Medium length hair in layers that will inspire your new haircut",
             summary:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium,",
-            img_url:"./src/assets/post-slide-1.jpg"
+            img_url:"./post-slide-1.jpg"
         },
 
         {
@@ -116,21 +116,21 @@ export const Header = {
             id:1,
             heading: "17 Pictures of Medium length hair in layers that will inspire your new haircut",
             summary:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium,",
-            img_url:"./src/assets/post-slide-2.jpg"
+            img_url:"./post-slide-2.jpg"
         },
 
         {
             id:2,
             heading: "17 Pictures of Medium length hair in layers that will inspire your new haircut",
             summary:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium,",
-            img_url:"./src/assets/post-slide-3.jpg"
+            img_url:"./post-slide-3.jpg"
         },
 
         {
             id:3,
             heading: "17 Pictures of Medium length hair in layers that will inspire your new haircut",
             summary:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium,",
-            img_url:"./src/assets/post-slide-4.jpg"
+            img_url:"./post-slide-4.jpg"
         }
     ]
 };
@@ -172,19 +172,19 @@ export interface sectionType{
 
 export const all:sectionType = {
     big_img_text: {
-        img_url:"./src/assets/post-landscape-1.jpg",
+        img_url:"./post-landscape-1.jpg",
         category: "culture",
         date: "july 5th '22",
         heading: "11 Work From Home Part-Time Jobs You Can Do Now",
         summary: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium, similique blanditiis molestiae ut saepe perspiciatis officia nemo, eos quae cumque. Accusamus fugiat architecto rerum animi atque eveniet, quo, praesentium dignissimos",
-        second_img_url: "./src/assets/person-1.jpg",
+        second_img_url: "./person-1.jpg",
         person_name: "Cameron Williamson"
     },
 
     small_img_texts:[
         {
             id: "SIT-1",
-            img_url:"./src/assets/post-landscape-2.jpg",
+            img_url:"./post-landscape-2.jpg",
             category:"sport",
             date: "july 5th '22",
             title:"Let’s Get Back to Work, New York"
@@ -192,7 +192,7 @@ export const all:sectionType = {
 
         {
             id: "SIT-2",
-            img_url:"./src/assets/post-slide-3.jpg",
+            img_url:"./post-slide-3.jpg",
             category:"food",
             date: "july 17th '22",
             title:"How to Avoid Distraction and Stay Focused During Video Calls?"
@@ -200,7 +200,7 @@ export const all:sectionType = {
 
         {
             id: "SIT-3",
-            img_url:"./src/assets/post-landscape-7.jpg",
+            img_url:"./post-landscape-7.jpg",
             category:"design",
             date: "july 5th '22",
             title:"Let’s Get Back to Work, New York"
@@ -208,7 +208,7 @@ export const all:sectionType = {
 
         {
             id: "SIT-4",
-            img_url:"./src/assets/post-slide-1.jpg",
+            img_url:"./post-slide-1.jpg",
             category:"business",
             date: "mar 15th '22",
             title:"Why Craigslist Tampa Is One of The Most Interesting Places On the Web?"
@@ -216,7 +216,7 @@ export const all:sectionType = {
 
         {
             id: "SIT-5",
-            img_url:"./src/assets/post-slide-4.jpg",
+            img_url:"./post-slide-4.jpg",
             category:"tech",
             date: "july 5th '22",
             title:"Let’s Get Back to Work, New York"
@@ -224,7 +224,7 @@ export const all:sectionType = {
 
         {
             id: "SIT-6",
-            img_url:"./src/assets/post-landscape-8.jpg",
+            img_url:"./post-landscape-8.jpg",
             category:"travel",
             date: "july 5th '22",
             title:"Let’s Get Back to Work, New York"
@@ -304,19 +304,19 @@ export const culture: middle_sections_type= {
     },
     middle_section_left: {
         first_part:{
-            img_url:"./src/assets/post-slide-4.jpg",
+            img_url:"./post-slide-4.jpg",
             category: "culture",
             date: "jul 5th '22",
             heading: "What is the son of Football Coach John Gruden, Deuce Gruden doing Now?",
             summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio placeat exercitationem magni voluptates dolore. Tenetur fugiat voluptates quas, nobis error deserunt aliquam temporibus sapiente, laudantium dolorum itaque libero eos deleniti?            ",
-            second_img_url: "./src/assets/person-4.jpg",
+            second_img_url: "./person-4.jpg",
             person_name: "Wade Warren"
         },
 
         //doggy pic
         second_part: {
             id: "MS-1",
-            img_url:"./src/assets/post-landscape-1.jpg",
+            img_url:"./post-landscape-1.jpg",
             category: "culture",
             date: "jul 5th '22",
             title: "11 Work From Home Part-Time Jobs You Can Do Now",
@@ -336,7 +336,7 @@ export const culture: middle_sections_type= {
 
         last_part: {
             id:"MS-2",
-            img_url: "./src/assets/post-landscape-2.jpg",
+            img_url: "./post-landscape-2.jpg",
             category: "culture",
             date: "jul 5th, '22",
             title: "How to Avoid Distraction and Stay Focused During Video Calls?",
@@ -395,19 +395,19 @@ export const business: middle_sections_type = {
     },
     middle_section_left: {
         first_part:{
-            img_url:"./src/assets/post-slide-1.jpg",
+            img_url:"./post-slide-1.jpg",
             category: "culture",
             date: "jul 5th '22",
             heading: "What is the son of Football Coach John Gruden, Deuce Gruden doing Now?",
             summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio placeat exercitationem magni voluptates dolore. Tenetur fugiat voluptates quas, nobis error deserunt aliquam temporibus sapiente, laudantium dolorum itaque libero eos deleniti?            ",
-            second_img_url: "./src/assets/person-1.jpg",
+            second_img_url: "./person-1.jpg",
             person_name: "Wade Warren"
         },
 
         //doggy pic
         second_part: {
             id: "MS-1",
-            img_url:"./src/assets/post-slide-3.jpg",
+            img_url:"./post-slide-3.jpg",
             category: "culture",
             date: "jul 5th '22",
             title: "11 Work From Home Part-Time Jobs You Can Do Now",
@@ -427,7 +427,7 @@ export const business: middle_sections_type = {
 
         last_part: {
             id:"MS-2",
-            img_url: "./src/assets/post-landscape-7.jpg",
+            img_url: "./post-landscape-7.jpg",
             category: "culture",
             date: "jul 5th, '22",
             title: "How to Avoid Distraction and Stay Focused During Video Calls?",
@@ -523,7 +523,7 @@ export const footer = {
         arr:[
             {
                 id:"FRP-1",//footer recent post
-                img_url: "./src/assets/post-landscape-1.jpg",
+                img_url: "./post-landscape-1.jpg",
                 category: "culture",
                 date: "june 15th '22",
                 title: "5 Great startup tips for female founders"
@@ -531,7 +531,7 @@ export const footer = {
 
             {
                 id:"FRP-2",
-                img_url: "./src/assets/post-landscape-2.jpg",
+                img_url: "./post-landscape-2.jpg",
                 category: "culture",
                 date: "june 15th '22",
                 title: "5 Great startup tips for female founders"
@@ -540,7 +540,7 @@ export const footer = {
             
             {
                 id:"FRP-3",
-                img_url: "./src/assets/post-slide-1.jpg",
+                img_url: "./post-slide-1.jpg",
                 category: "culture",
                 date: "june 15th '22",
                 title: "5 Great startup tips for female founders"
@@ -549,7 +549,7 @@ export const footer = {
             
             {
                 id:"FRP-4",
-                img_url: "./src/assets/post-slide-2.jpg",
+                img_url: "./post-slide-2.jpg",
                 category: "culture",
                 date: "june 15th '22",
                 title: "5 Great startup tips for female founders"
@@ -593,7 +593,7 @@ export const single_post = {
     },
     img_paras: [
         {
-            img_url:"./src/assets/post-landscape-1.jpg",
+            img_url:"./post-landscape-1.jpg",
             img_caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, odit?",
             paras: [
                 "Sunt reprehenderit, hic vel optio odit est dolore, distinctio iure itaque enim pariatur ducimus. Rerum soluta, perspiciatis voluptatum cupiditate praesentium repellendus quas expedita exercitationem tempora aliquam quaerat in eligendi adipisci harum non omnis reprehenderit quidem beatae modi. Ea fugiat enim libero, ipsam dicta explicabo nihil, tempore, nulla repellendus eos necessitatibus eligendi corporis cum? Eaque harum, eligendi itaque numquam aliquam soluta.",
@@ -604,7 +604,7 @@ export const single_post = {
             ]
         },
         {
-            img_url:"./src/assets/post-slide-3.jpg",
+            img_url:"./post-slide-3.jpg",
             img_caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, odit?",
             paras: [
                 "Sunt reprehenderit, hic vel optio odit est dolore, distinctio iure itaque enim pariatur ducimus. Rerum soluta, perspiciatis voluptatum cupiditate praesentium repellendus quas expedita exercitationem tempora aliquam quaerat in eligendi adipisci harum non omnis reprehenderit quidem beatae modi. Ea fugiat enim libero, ipsam dicta explicabo nihil, tempore, nulla repellendus eos necessitatibus eligendi corporis cum? Eaque harum, eligendi itaque numquam aliquam soluta.",
@@ -617,13 +617,13 @@ export const single_post = {
     ],
     comments: [
         {
-            img_url: "./src/assets/person-1.jpg",
+            img_url: "./person-1.jpg",
             name: "Jordan Singer",
             day: "2d",
             comment: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non minima ipsum at amet doloremque qui magni, placeat deserunt pariatur itaque laudantium impedit aliquam eligendi repellendus excepturi quibusdam nobis esse accusantium."
         },
         {
-            img_url: "./src/assets/post-landscape-8.jpg",
+            img_url: "./post-landscape-8.jpg",
             name: "Santiago Roberts",
             day: "4d",
             comment: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non minima ipsum at amet doloremque qui magni, placeat deserunt pariatur itaque laudantium impedit."
@@ -631,13 +631,13 @@ export const single_post = {
     ],
     replies: [
         {
-            img_url: "./src/assets/person-4.jpg",
+            img_url: "./person-4.jpg",
             name: "Brandon Smith",
             day: "2d",
             comment: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non minima ipsum at amet doloremque qui m."
         },
         {
-            img_url: "./src/assets/post-slide-3.jpg",
+            img_url: "./post-slide-3.jpg",
             name: "Santiago Roberts",
             day: "1d",
             comment: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non minima ipsum at amet doloremque qui magni, placeat deserunt pariatur itaque laudantium impedit."
@@ -768,7 +768,7 @@ export const single_post = {
         ],
 
         video:{
-            img_url:"./src/assets/post-landscape-7.jpg"
+            img_url:"./post-landscape-7.jpg"
         },
         categories_tags:[
             "business",
