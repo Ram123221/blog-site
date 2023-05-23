@@ -1,4 +1,9 @@
 import {FaFacebook, FaTwitter, FaInstagram, FaSearch, FaBars, FaSkype, FaLinkedin} from "react-icons/fa";
+import {FiSmartphone} from "react-icons/fi";
+import {AiOutlineMail} from "react-icons/ai";
+import {CiLocationOn} from "react-icons/ci"
+
+//blog page 
 
 //header data
 export const Header = {
@@ -8,27 +13,27 @@ export const Header = {
 
         nav_menus:[
             {
-                id:"NM-1",
+                id:0,
                 name: "blog"
             },
 
             {
-                id:"NM-2",
+                id:1,
                 name: "single post"
             },
 
             {
-                id:"NM-3",
+                id:2,
                 name: "categories",
             },
 
             {
-                id:"NM-4",
+                id:3,
                 name: "about"
             },
 
             {
-                id:"NM-5",
+                id:4,
                 name: "contact"
             },
         ],
@@ -100,7 +105,7 @@ export const Header = {
     carousel:[
         {
             //CI=== carousel item
-            id:"CI-1",
+            id:0,
             heading: "17 Pictures of Medium length hair in layers that will inspire your new haircut",
             summary:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium,",
             img_url:"./src/assets/post-slide-1.jpg"
@@ -108,21 +113,21 @@ export const Header = {
 
         {
             //CI=== carousel item
-            id:"CI-2",
+            id:1,
             heading: "17 Pictures of Medium length hair in layers that will inspire your new haircut",
             summary:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium,",
             img_url:"./src/assets/post-slide-2.jpg"
         },
 
         {
-            id:"CI-3",
+            id:2,
             heading: "17 Pictures of Medium length hair in layers that will inspire your new haircut",
             summary:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium,",
             img_url:"./src/assets/post-slide-3.jpg"
         },
 
         {
-            id:"CI-4",
+            id:3,
             heading: "17 Pictures of Medium length hair in layers that will inspire your new haircut",
             summary:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium,",
             img_url:"./src/assets/post-slide-4.jpg"
@@ -562,3 +567,256 @@ export const footer = {
         ]
     }
 }
+
+export interface img_paras_type {
+    img_url: string,
+    img_caption: string,
+    paras: string[]
+};
+
+export interface comment_reply_type{
+    img_url: string,
+    name: string,
+    day: string,
+    comment: string
+};
+
+
+//single-post page
+export const single_post = {
+    //left part
+    single_post_top: {
+        category: "business",
+        date: "june 12th '22",
+        title: "13 Amazing Poems from Shel Silverstein with Valuable Life Lessons",
+        writer: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia sed, suscipit distinctio, numquam omnis quo fuga ipsam quis inventore voluptatum recusandae culpa, unde doloribus saepe labore alias voluptate expedita? Dicta delectus beatae explicabo odio voluptatibus quas, saepe qui aperiam autem obcaecati, illo et! Incidunt voluptas culpa neque repellat sint, accusamus beatae, cumque autem tempore quisquam quam eligendi harum debitis.`
+    },
+    img_paras: [
+        {
+            img_url:"./src/assets/post-landscape-1.jpg",
+            img_caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, odit?",
+            paras: [
+                "Sunt reprehenderit, hic vel optio odit est dolore, distinctio iure itaque enim pariatur ducimus. Rerum soluta, perspiciatis voluptatum cupiditate praesentium repellendus quas expedita exercitationem tempora aliquam quaerat in eligendi adipisci harum non omnis reprehenderit quidem beatae modi. Ea fugiat enim libero, ipsam dicta explicabo nihil, tempore, nulla repellendus eos necessitatibus eligendi corporis cum? Eaque harum, eligendi itaque numquam aliquam soluta.",
+                "Explicabo perspiciatis, laborum provident voluptates illum in nulla consectetur atque quaerat excepturi quisquam, veniam velit ex pariatur quos consequuntur? Excepturi reiciendis perferendis, cupiditate dolorem eos illum amet. Beatae voluptates nemo esse ratione voluptate, nesciunt fugit magnam veritatis voluptas dignissimos doloribus maiores? Aliquam, dolores natus exercitationem corrupti blanditiis, consequuntur nihil nobis sed voluptatibus maiores sunt, illo provident aliquid laborum. Vitae, ut.",
+                "Reprehenderit aut sed doloribus blanditiis, aspernatur magni? In molestias rem, similique ut esse repudiandae quod recusandae dolores neque earum omnis at, suscipit fuga? Minima qui veniam deserunt quisquam error amet at ratione nesciunt porro quis placeat repudiandae voluptatibus officiis fuga necessitatibus, expedita officia adipisci eaque labore accusamus? Nesciunt repellat illo exercitationem facilis similique quaerat, quis sequi? Praesentium nulla ipsam dolor.",
+                "Dolorum, incidunt! Adipisci harum itaque maxime dolores doloremque porro eligendi quis, doloribus vel sit rerum sunt obcaecati nam suscipit nulla vitae alias blanditiis aliquam debitis atque illo modi et placeat. Ratione iure eveniet provident. Culpa laboriosam sed ad quia. Corrupti, earum, perferendis dolore cupiditate sint nihil maiores iusto tempora nobis porro itaque est. Ut laborum culpa assumenda pariatur et perferendis?",
+                "Est soluta veritatis laboriosam, consequuntur temporibus asperiores, fugit id a ullam sed, expedita sequi doloribus fugiat. Odio et necessitatibus enim nam, iste reprehenderit cupiditate omnis ut iure aliquid obcaecati, repellendus nemo provident eveniet tempora minus! Voluptates aut laboriosam, maiores nihil accusantium, a dolorum quaerat tenetur illo eum culpa cum laudantium sunt doloremque modi possimus magni? Perferendis cum repudiandae corrupti porro."
+            ]
+        },
+        {
+            img_url:"./src/assets/post-slide-3.jpg",
+            img_caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, odit?",
+            paras: [
+                "Sunt reprehenderit, hic vel optio odit est dolore, distinctio iure itaque enim pariatur ducimus. Rerum soluta, perspiciatis voluptatum cupiditate praesentium repellendus quas expedita exercitationem tempora aliquam quaerat in eligendi adipisci harum non omnis reprehenderit quidem beatae modi. Ea fugiat enim libero, ipsam dicta explicabo nihil, tempore, nulla repellendus eos necessitatibus eligendi corporis cum? Eaque harum, eligendi itaque numquam aliquam soluta.",
+                "Explicabo perspiciatis, laborum provident voluptates illum in nulla consectetur atque quaerat excepturi quisquam, veniam velit ex pariatur quos consequuntur? Excepturi reiciendis perferendis, cupiditate dolorem eos illum amet. Beatae voluptates nemo esse ratione voluptate, nesciunt fugit magnam veritatis voluptas dignissimos doloribus maiores? Aliquam, dolores natus exercitationem corrupti blanditiis, consequuntur nihil nobis sed voluptatibus maiores sunt, illo provident aliquid laborum. Vitae, ut.",
+                "Reprehenderit aut sed doloribus blanditiis, aspernatur magni? In molestias rem, similique ut esse repudiandae quod recusandae dolores neque earum omnis at, suscipit fuga? Minima qui veniam deserunt quisquam error amet at ratione nesciunt porro quis placeat repudiandae voluptatibus officiis fuga necessitatibus, expedita officia adipisci eaque labore accusamus? Nesciunt repellat illo exercitationem facilis similique quaerat, quis sequi? Praesentium nulla ipsam dolor.",
+                "Dolorum, incidunt! Adipisci harum itaque maxime dolores doloremque porro eligendi quis, doloribus vel sit rerum sunt obcaecati nam suscipit nulla vitae alias blanditiis aliquam debitis atque illo modi et placeat. Ratione iure eveniet provident. Culpa laboriosam sed ad quia. Corrupti, earum, perferendis dolore cupiditate sint nihil maiores iusto tempora nobis porro itaque est. Ut laborum culpa assumenda pariatur et perferendis?",
+                "Est soluta veritatis laboriosam, consequuntur temporibus asperiores, fugit id a ullam sed, expedita sequi doloribus fugiat. Odio et necessitatibus enim nam, iste reprehenderit cupiditate omnis ut iure aliquid obcaecati, repellendus nemo provident eveniet tempora minus! Voluptates aut laboriosam, maiores nihil accusantium, a dolorum quaerat tenetur illo eum culpa cum laudantium sunt doloremque modi possimus magni? Perferendis cum repudiandae corrupti porro."
+            ]
+        }
+    ],
+    comments: [
+        {
+            img_url: "./src/assets/person-1.jpg",
+            name: "Jordan Singer",
+            day: "2d",
+            comment: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non minima ipsum at amet doloremque qui magni, placeat deserunt pariatur itaque laudantium impedit aliquam eligendi repellendus excepturi quibusdam nobis esse accusantium."
+        },
+        {
+            img_url: "./src/assets/post-landscape-8.jpg",
+            name: "Santiago Roberts",
+            day: "4d",
+            comment: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non minima ipsum at amet doloremque qui magni, placeat deserunt pariatur itaque laudantium impedit."
+        }
+    ],
+    replies: [
+        {
+            img_url: "./src/assets/person-4.jpg",
+            name: "Brandon Smith",
+            day: "2d",
+            comment: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non minima ipsum at amet doloremque qui m."
+        },
+        {
+            img_url: "./src/assets/post-slide-3.jpg",
+            name: "Santiago Roberts",
+            day: "1d",
+            comment: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non minima ipsum at amet doloremque qui magni, placeat deserunt pariatur itaque laudantium impedit."
+        }
+    ],
+    form:{
+        head: "Leave a Comment",
+        btn_name: "Post comment"
+    },
+
+    
+    //right part
+    pop_trend_lat:{
+        popular: [
+            {
+               category: "sport",
+               date: "jul 5th '22",
+               title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+               writer: "Jenny Wilson" 
+            },
+            {
+                category: "sport",
+                date: "jul 5th '22",
+                title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+                writer: "Jenny Wilson" 
+             },
+             {
+                category: "lifestyle",
+                date: "jul 5th '22",
+                title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+                writer: "Jenny Wilson" 
+             },
+             {
+                category: "sport",
+                date: "jul 5th '22",
+                title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+                writer: "Jenny Wilson" 
+             },
+             {
+                category: "business",
+                date: "jul 5th '22",
+                title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+                writer: "Jenny Wilson" 
+             },
+             {
+                category: "sport",
+                date: "jul 5th '22",
+                title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+                writer: "Jenny Wilson" 
+             }
+        ],
+        trending:  [
+            {
+               category: "lifestyle",
+               date: "jul 5th '22",
+               title: "9 Half-up/half-down Hairstyles for Long and Medium Hair",
+               writer: "Jenny Wilson" 
+            },
+            {
+                category: "sport",
+                date: "jul 5th '22",
+                title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+                writer: "Jenny Wilson" 
+             },
+             {
+                category: "lifestyle",
+                date: "jul 5th '22",
+                title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+                writer: "Jenny Wilson" 
+             },
+             {
+                category: "sport",
+                date: "jul 5th '22",
+                title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+                writer: "Jenny Wilson" 
+             },
+             {
+                category: "business",
+                date: "jul 5th '22",
+                title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+                writer: "Jenny Wilson" 
+             },
+             {
+                category: "sport",
+                date: "jul 5th '22",
+                title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+                writer: "Jenny Wilson" 
+             }
+        ],
+    
+        latest: [
+            {
+               category: "business",
+               date: "jul 5th '22",
+               title: "10 Life-Changing Hacks Every Working Mom Should Know",
+               writer: "Jenny Wilson" 
+            },
+            {
+                category: "sport",
+                date: "jul 5th '22",
+                title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+                writer: "Jenny Wilson" 
+             },
+             {
+                category: "lifestyle",
+                date: "jul 5th '22",
+                title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+                writer: "Jenny Wilson" 
+             },
+             {
+                category: "sport",
+                date: "jul 5th '22",
+                title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+                writer: "Jenny Wilson" 
+             },
+             {
+                category: "business",
+                date: "jul 5th '22",
+                title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+                writer: "Jenny Wilson" 
+             },
+             {
+                category: "sport",
+                date: "jul 5th '22",
+                title: "How to Avoid Distraction and Stay Focused During Video Calls?",
+                writer: "Jenny Wilson" 
+             }
+        ],
+
+        video:{
+            img_url:"./src/assets/post-landscape-7.jpg"
+        },
+        categories_tags:[
+            "business",
+            "culture",
+            "sport",
+            "food",
+            "politics",
+            "celebrity",
+            "startups",
+            "travel"
+        ]
+    }
+};
+
+//about page
+
+
+//categories page
+
+
+//contact page
+export interface contact_subpart_type{
+    icon: JSX.Element,
+    name: string,
+    info: string
+};
+
+export const contact ={
+    address:{
+        icon: <CiLocationOn />,
+        name: "address",
+        info: "A108 Adam Street, NY 535022, USA"
+    },
+    phone_num:{
+        icon: <FiSmartphone />,
+        name: "phone number",
+        info: "+1 5589 55488 55"
+    },
+    email:{
+        icon: <AiOutlineMail />,
+        name: "email",
+        info: "info@example.com"
+    },
+    form: {
+        head: "",
+        btn_name: "send message"
+    }
+}
+
+//search-result page
+

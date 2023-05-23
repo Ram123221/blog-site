@@ -1,7 +1,7 @@
-import SmallDesc from "../Body/AllSection/SmallDesc";
+import SmallDesc from "../Body/SharedComponents/SmallDesc";
 import { footer } from "../Data/data";
 import {FaAngleRight} from "react-icons/fa";
-import SmallImgText from "../Body/AllSection/SmallImgText";
+import SmallImgText from "../Body/SharedComponents/SmallImgText";
 
 function Footer() {
     const {foot_head, navigation, categories, recent_posts, foot_last} = footer;

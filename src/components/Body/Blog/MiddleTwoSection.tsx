@@ -1,7 +1,7 @@
-import SectionHeader from "./SectionHeader";
-import BigImgText from "./BigImgText";
-import CategoryDatePlusQuote from "./CategoryDatePlusQuote";
-import SmallImgTextPlusDesc from "./SmallImgTextPlusDesc";
+import SectionHeader from "../SharedComponents/SectionHeader";
+import BigImgText from "../SharedComponents/BigImgText";
+import CategoryDatePlusQuote from "../SharedComponents/CategoryDatePlusQuote";
+import SmallImgTextPlusDesc from "../SharedComponents/SmallImgTextPlusDesc";
 
 import { middle_sections_type } from "../../Data/data";
 

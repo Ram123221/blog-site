@@ -1,22 +1,37 @@
-import { useState } from 'react'
 import './App.scss'
 import Navbar from './components/Header/Navbar/Navbar';
-import Carousel from './components/Header/Carousel/Carousel';
-import AllSection from './components/Body/AllSection/AllSection';
-import MiddleTwoSection from './components/Body/AllSection/MiddleTwoSection';
-import { culture, business } from './components/Data/data';
 import Footer from "./components/Footer/Footer.tsx";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Blog from './components/Body/Blog/Blog.tsx';
+import SinglePost from './components/Body/SinglePost/SinglePost.tsx';
+import Categories from './components/Body/Categories/Categories.tsx';
+import SearchResult from './components/Body/SearchResult/SearchResult.tsx';
+import About from './components/Body/About/About.tsx';
+import Contact from './components/Body/Contact/Contact.tsx';
+import Error from './components/Body/Error/Error.tsx';
+
 function App() {
 
   return (
     <>
+      <BrowserRouter>
       <Navbar />
-      <Carousel />
-      <AllSection />
-      <MiddleTwoSection section={culture} />
-      <MiddleTwoSection section={business} />
-      <AllSection />
+      
+      {/*router */}
+        <Routes>
+          <Route path="/">
+            <Route index element={<Blog />} />
+            <Route path='single-post' element={<SinglePost />} />
+            <Route path='categories' element={<Categories />} />
+            <Route path='search-result' element={<SearchResult />} />
+            <Route path='about' element={<About />} />
+            <Route path='contact' element={<Contact />} />
+            <Route path='*' element={<Error />} />
+          </Route>
+        </Routes>
+
       <Footer />
+      </BrowserRouter>
     </>
   )
 }

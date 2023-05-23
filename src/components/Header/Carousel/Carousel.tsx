@@ -32,13 +32,33 @@ function Carousel() {
     };
 
     useEffect(()=>{
-        console.log("rendered!!!");
+        // console.log("rendered!!!");
     }, []);
 
     useEffect(()=>{
         checkEndReached();
-        console.log(itemNumber);
+        // console.log(itemNumber);
     }, [itemNumber]);
+
+    //automatic carousel showing right items each time
+
+    //updates itemNumber positively
+    //calling this function after 2s for displaying current item for 1.5s as our transition duration is 0.5s
+    const updateItemNumber = ()=>{
+        setItemNumber(itemNumber + 1);
+        if(itemNumber >= carousel.length-1){
+            setItemNumber(0);
+        }
+    };
+
+    useEffect(()=>{
+        const interval = setTimeout(updateItemNumber, 2000);
+
+        return ()=>{clearTimeout(interval)};
+    }, [itemNumber]);
+
+
+
 
   return (
     <div id="carousel-container">
@@ -55,7 +75,7 @@ function Carousel() {
                 <span className={itemNumber==3?"dot active":'dot'}></span>
             </div>
         
-            <div id="carousel" style={{transform: `translateX(-${itemNumber * 100}%)`}}>
+            <div id="carousel" style={{transform: `translateX(-${itemNumber * 100}%)`, transition: (itemNumber==0)?"transform 0s ease-in-out":"transform 0.5s ease-in-out"}}>
             
             {
                 carousel.map(carousel_item=>{
@@ -63,7 +83,7 @@ function Carousel() {
                     const {id, img_url, heading, summary} = carousel_item;
 
                     return (
-                        <div className="carousel-item" style={{backgroundImage: `linear-gradient(rgba(6, 6, 6, 0.121) 65%,rgba(6, 6, 6, 0.3)), url(${img_url})`}} key={id}>
+                        <div className="carousel-item" style={{backgroundImage: `linear-gradient(rgba(6, 6, 6, 0.121) 65%,rgba(6, 6, 6, 0.3)), url(${img_url})`, opacity:(itemNumber == id)?1:0.3}} key={id}>
                             
                             <h2 className="medium-font">
                                 {heading}

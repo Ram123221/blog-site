@@ -1,9 +1,10 @@
 @import "../../../GlobalColors.scss";
 
 #carousel-container{
-    width: 100vw;
+    width: 100% !important;
     position: relative;
-    // z-index: -1;
+    z-index: 2;
+    
 
     //arrows
     span{
@@ -37,6 +38,7 @@
             bottom: 6rem;
             display: flex;
             justify-content: center;
+            z-index: 1;
 
             .active{
                 background-color: $white !important;
@@ -55,16 +57,15 @@
     
     #carousel{
         display: grid;
-        grid-template-columns: repeat(4,100vw);
-        transition: transform 0.5s ease-in-out;
+        grid-template-columns: repeat(4, 100%);
 
         .carousel-item{
-
             padding: 20rem 4rem 6rem;
             color: $white;
             background-size: cover;
             background-position: center;
-            margin: 5rem 3rem;
+            margin: 5rem 1.7rem 5rem 3rem;
+            transition: opacity 1s;
 
             h2{
                 padding-bottom: 1rem;
@@ -75,6 +76,14 @@
             }
         }
 
+    }
+}
+
+@media screen and (max-width: 500px){
+    .carousel-item{
+        p{
+            display: none;
+        }
     }
 }
 

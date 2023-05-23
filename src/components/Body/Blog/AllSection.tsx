@@ -1,7 +1,6 @@
-import React from 'react';
-import BigImgText from './BigImgText';
-import SmallImgText from './SmallImgText';
-import Quote from './Quote';
+import BigImgText from '../SharedComponents/BigImgText';
+import SmallImgText from '../SharedComponents/SmallImgText';
+import Quote from '../SharedComponents/Quote';
 import { all } from '../../Data/data';
 
 function AllSection() {
