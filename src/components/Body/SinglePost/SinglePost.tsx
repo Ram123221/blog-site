@@ -6,7 +6,7 @@ import Form from "../SharedComponents/Form";
 import PopLatTrend from "./PopLatTrend";
 
 function SinglePost() {
-  const {single_post_top,img_paras, comments, replies, form, pop_trend_lat} = single_post;
+  const {single_post_top,img_paras, comments, replies, form} = single_post;
 
   return (
     <div id="single-post">
