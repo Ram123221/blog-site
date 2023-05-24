@@ -906,4 +906,66 @@ export const contact ={
 }
 
 //search-result page
+export const search_result= {
+    imgs_texts:[
+        {
+            img_url:"./post-landscape-1.jpg",
+            category: "culture",
+            date: "july 5th '22",
+            heading: "11 Work From Home Part-Time Jobs You Can Do Now",
+            summary: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium, similique blanditiis molestiae ut saepe perspiciatis officia nemo, eos quae cumque. Accusamus fugiat architecto rerum animi atque eveniet, quo, praesentium dignissimos",
+            second_img_url: "./person-1.jpg",
+            person_name: "Cameron Williamson"
+        },
 
+        {
+            img_url:"./post-slide-3.jpg",
+            category: "culture",
+            date: "july 5th '22",
+            heading: "11 Work From Home Part-Time Jobs You Can Do Now",
+            summary: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium, similique blanditiis molestiae ut saepe perspiciatis officia nemo, eos quae cumque. Accusamus fugiat architecto rerum animi atque eveniet, quo, praesentium dignissimos",
+            second_img_url: "./person-1.jpg",
+            person_name: "Cameron Williamson"
+        },
+
+        {
+            img_url:"./post-landscape-1.jpg",
+            category: "culture",
+            date: "july 5th '22",
+            heading: "11 Work From Home Part-Time Jobs You Can Do Now",
+            summary: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium, similique blanditiis molestiae ut saepe perspiciatis officia nemo, eos quae cumque. Accusamus fugiat architecto rerum animi atque eveniet, quo, praesentium dignissimos",
+            second_img_url: "./person-1.jpg",
+            person_name: "Cameron Williamson"
+        },
+
+        {
+            img_url:"./post-slide-2.jpg",
+            category: "culture",
+            date: "july 5th '22",
+            heading: "11 Work From Home Part-Time Jobs You Can Do Now",
+            summary: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium, similique blanditiis molestiae ut saepe perspiciatis officia nemo, eos quae cumque. Accusamus fugiat architecto rerum animi atque eveniet, quo, praesentium dignissimos",
+            second_img_url: "./person-1.jpg",
+            person_name: "Cameron Williamson"
+        },
+
+        {
+            img_url:"./post-landscape-1.jpg",
+            category: "culture",
+            date: "july 5th '22",
+            heading: "11 Work From Home Part-Time Jobs You Can Do Now",
+            summary: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium, similique blanditiis molestiae ut saepe perspiciatis officia nemo, eos quae cumque. Accusamus fugiat architecto rerum animi atque eveniet, quo, praesentium dignissimos",
+            second_img_url: "./person-1.jpg",
+            person_name: "Cameron Williamson"
+        },
+
+        {
+            img_url:"./post-landscape-1.jpg",
+            category: "culture",
+            date: "july 5th '22",
+            heading: "11 Work From Home Part-Time Jobs You Can Do Now",
+            summary: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium, similique blanditiis molestiae ut saepe perspiciatis officia nemo, eos quae cumque. Accusamus fugiat architecto rerum animi atque eveniet, quo, praesentium dignissimos",
+            second_img_url: "./person-1.jpg",
+            person_name: "Cameron Williamson"
+        },
+    ]
+}

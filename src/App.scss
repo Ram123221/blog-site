@@ -96,40 +96,35 @@ section#all{
     img{
         margin: 3rem 0;
     }
-}
 
-.cat-date{
-    font-variant: small-caps;
-    margin-bottom: 1rem;
-
-    .category{
-
-    }
-
-    .dot-middle{
-
-    }
-
-    .date{
-
+    .big-img-text{
+        padding-right: 2.5rem;
     }
 }
 
-.img-name{
-        display: flex;
-        align-items: center;
-        gap: 1rem;
+.big-img-text{
 
     img{
-        display: inline-block !important;
-        width: 50px !important;
-        height: 50px !important;
-        border-radius: 50%;
+        width: 100%;
     }
-
-    span{
+    
+    .img-name{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+    
+        img{
+            display: inline-block !important;
+            width: 50px !important;
+            height: 50px !important;
+            border-radius: 50%;
+        }
+    
+        span{
+        }
     }
 }
+
 
 .small-desc{
 
@@ -215,8 +210,29 @@ section.middle-two-section{
     }
 }
 
+//category date with dot in the middle //global
 .cat-date{
+    font-variant: small-caps;
     color: $grey-dark;
+    margin-bottom: 1rem;
+    align-items: center;
+    gap:0.5rem;
+    display: flex;
+
+    .category{
+        
+    }
+
+    .dot-middle{
+        width:5px;
+        height: 5px;
+        background-color: $grey-dark !important;
+        border-radius: 50%;
+    }
+
+    .date{
+
+    }
 }
 
 
@@ -345,7 +361,7 @@ section.middle-two-section{
                 margin: 0;
             }
             div.title{
-                margin-top: -2.5rem;
+                margin-top: -1rem;
                 color: $light-grey;
 
                 &:hover{
@@ -478,111 +494,17 @@ section.middle-two-section{
     }
 
     #single-post-right{
-        
-        //popular trending latest section 
-        #pop-trend-lat{
-            margin-bottom: 3rem;
-
-            header#pop-trend-lat-head{
-                display: flex;
-                gap: 2rem;
-                font-variant: small-caps;
-
-                h1{
-                    cursor: pointer;
-                }
-
-            }
-
-            #PDL-grid-container{
-                width: 100%;
-                overflow: hidden;
-            }
-
-            #PDL-grid{
-                display: grid;
-                grid-template-columns: repeat(3,100%);
-                transition: transform 0.5s ease-in-out;
-                // overflow: hidden;
-
-                & > * > *{
-                    padding-bottom: 1.3rem;
-                    margin-top: 2rem;
-                    border-bottom: 3px solid $grey-white;
-                }
-            }
-        }
-
-        #video{
-
-            h1{
-                padding-bottom: 0;   
-            }
-
-            img{
-                display: block;
-                height: 20rem;
-                object-fit: cover;
-                margin: 3rem 0;
-            }
-        }
-
-        @mixin list-div{
-            text-transform: capitalize;
-            display: flex;
-            padding: 1.5rem 0;
-            color: $grey-dark;
-            cursor: pointer;
-        }
-
-        #categories{
-
-            .list{
-                padding: 2.5rem 0 0;
-
-                div{
-                    @include list-div;
-                    border-bottom: 2px solid $grey-white;
-
-                    &:hover{
-                        color: $bright-black;
-                    }
-
-                }
-            }
-        }
-
-        #tags{
-
-            .list{
-                padding: 2.5rem 0 0;
-
-                div{
-                    @include list-div;
-                    display: inline-block;
-                    border: 2px solid $grey-white;
-                    padding: 1rem;
-                    margin-right: 0.4rem;
-                    margin-bottom: 0.4rem;
-                    transition: all 0.4s;
-
-                    &:hover{
-                        border-color: $bright-black;
-                        color: $bright-black;
-                    }
-                }
-            }
-        }
-
-        //for tags and categories part
-        .single-post-bottom-head{
-            text-transform: uppercase;
-            padding-bottom: unset;
-        }
-
 
     }
 
+}
+
+//global title styling
+
+//for tags and categories part
+.single-post-bottom-head{
+    text-transform: uppercase;
+    padding-bottom: unset;
 }
 
 //for line below text
@@ -595,6 +517,102 @@ section.middle-two-section{
     border-radius: 1px;
     background-color: black;
 
+}
+
+//popular trending latest section 
+.pop-trend-lat{
+    margin-bottom: 3rem;
+
+    header.pop-trend-lat-head{
+        display: flex;
+        gap: 2rem;
+        font-variant: small-caps;
+
+        h1{
+            cursor: pointer;
+        }
+
+    }
+
+    .PDL-grid-container{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .PDL-grid{
+        display: grid;
+        grid-template-columns: repeat(3,100%);
+        transition: transform 0.5s ease-in-out;
+        // overflow: hidden;
+
+        & > * > *{
+            padding-bottom: 1.3rem;
+            margin-top: 2rem;
+            border-bottom: 3px solid $grey-white;
+        }
+    }
+}
+
+.video{
+
+    h1{
+        padding-bottom: 0;   
+    }
+
+    img{
+        display: block;
+        height: 20rem;
+        object-fit: cover;
+        margin: 3rem 0;
+        width: 100%;
+    }
+}
+
+@mixin list-div{
+    text-transform: capitalize;
+    display: flex;
+    padding: 1.5rem 0;
+    color: $grey-dark;
+    cursor: pointer;
+}
+
+.categories{
+
+    .list{
+        padding: 2.5rem 0 0;
+
+        div{
+            @include list-div;
+            border-bottom: 2px solid $grey-white;
+
+            &:hover{
+                color: $bright-black;
+            }
+
+        }
+    }
+}
+
+.tags{
+
+    .list{
+        padding: 2.5rem 0 0;
+
+        div{
+            @include list-div;
+            display: inline-block;
+            border: 2px solid $grey-white;
+            padding: 1rem;
+            margin-right: 0.4rem;
+            margin-bottom: 0.4rem;
+            transition: all 0.4s;
+
+            &:hover{
+                border-color: $bright-black;
+                color: $bright-black;
+            }
+        }
+    }
 }
 
 
@@ -822,6 +840,67 @@ section.middle-two-section{
         font-size: 1.6rem;
         line-height: 1.5;
         margin-bottom: 2rem;
+    }
+}
+
+//search results page
+#search-result{
+    max-width: 500px;
+    margin: auto;
+
+    #search-result-top{
+        padding: 5rem 0 1.5rem;
+
+        h1{
+            text-transform: uppercase;
+            padding-bottom: 2.5rem;
+        }
+
+        #search-result-left{
+
+            #imgs-texts{
+                .big-img-text{
+                    
+                    .img-name{
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+                    
+                        img{
+                            display: inline-block !important;
+                            width: 50px !important;
+                            height: 50px !important;
+                            border-radius: 50%;
+                        }
+                    
+                        span{
+                        }
+                    }
+
+                    .container{
+
+                        h1{
+                            font-size: 2rem;
+                            text-transform: capitalize;
+                            padding-bottom: 0.7rem;
+                        }
+
+                        p{
+                            font-size: 1.55rem;
+                            line-height: 1.4;
+                        }
+
+                        .img-name{
+                            padding: 2.2rem 0 2.5rem;
+                        }
+                    }
+                }
+            }
+
+            #pagination{
+
+            }
+        }
     }
 }
 
@@ -1068,5 +1147,17 @@ section.middle-two-section{
             }
         }
     }
-    
+
+    #search-result{
+        padding: 0 10rem;
+        max-width: unset;
+        display: grid;
+        grid-template-columns: 63% 33%;
+        gap: 4%;
+        margin-bottom: 6rem !important;
+
+        #search-result-top{
+            padding-top: unset;
+        }
+    }
 }

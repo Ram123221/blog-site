@@ -5,7 +5,7 @@ function BigImgText({big_img_text}:{big_img_text:big_img_text_type}) {
     const {img_url,category,second_img_url,date,heading,summary,person_name} = big_img_text;
 
   return (
-    <>
+    <div className='big-img-text'>
         <img src={img_url} alt="big-image-pic" />
         
         <div className="container">
@@ -39,7 +39,7 @@ function BigImgText({big_img_text}:{big_img_text:big_img_text_type}) {
                 </span>
             </div>
         </div>
-    </>
+    </div>
   )
 }
 

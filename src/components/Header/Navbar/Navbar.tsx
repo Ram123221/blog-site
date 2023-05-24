@@ -48,7 +48,6 @@ function Navbar() {
                 setToggleClicked(true);
             else if(winWidth < 1024)
             {
-                console.log("small")
                 setToggleClicked(false);
             }
         };
@@ -58,8 +57,8 @@ function Navbar() {
     },[]);
 
     useEffect(()=>{
-        console.log(width);
-        console.log(toggleClicked)
+        // console.log(width);
+        // console.log(toggleClicked)
     }, [width, toggleClicked]);
 
 
@@ -114,7 +113,6 @@ function Navbar() {
                                 {name}
                             </span>
                                 }
-
                                 {name=="categories" && (
                                     <>
                                     <span className="icon smaller-font">
@@ -133,7 +131,7 @@ function Navbar() {
                                                     linkToValue = "/search-result";
                                                 
                                                 return (
-                                                    <li className="link-list-item" key={id} id={name=="Deep Drop Down"?"dropdown-deep":''} onMouseOver={(name!="Deep Drop Down" || width > 1024)?()=>hoveredTrue(name):()=>{}} onMouseLeave={(name!="Deep Drop Down" || width > 1024)?()=>hoveredFalse(name):()=>{}} onClick={()=>menuItemClicked(name)}>
+                                                    <li className="link-list-item" key={id} id={name=="Deep Drop Down"?"dropdown-deep":''} onMouseOver={(name!="Deep Drop Down" || width > 1024)?()=>hoveredTrue(name):()=>{}} onMouseLeave={(name!="Deep Drop Down" || width > 1024)?()=>hoveredFalse(name):()=>{}} onClick={(name!="Search Result")?()=>menuItemClicked(name):()=>{menuItemClicked(name); updateToggling();}}>
 
                                                     <Link to={linkToValue} style={{marginBottom: (hoveredDeepmenu && name=="Deep Drop Down" && width<1024)?"1rem":0}}>
                                                         <span className="small-font">
