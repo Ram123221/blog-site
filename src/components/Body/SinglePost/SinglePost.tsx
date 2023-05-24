@@ -10,7 +10,7 @@ function SinglePost() {
   const {single_post_top,img_paras, comments, replies, form, pop_trend_lat} = single_post;
   const {popular, trending, latest, categories_tags} = pop_trend_lat;
 
-  const [translateLetter, setTranslateLetter] = useState<string>("");
+  const [translateLetter, setTranslateLetter] = useState<string>("p");
 
   const translate = (val:string) =>{
       switch(val){

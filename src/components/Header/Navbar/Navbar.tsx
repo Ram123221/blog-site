@@ -101,16 +101,16 @@ function Navbar() {
                         };
 
                         return (
-                            <li className="link-list-item" onClick={(width < 1024 && name!="categories")?updateToggling:()=>menuItemClicked(name)} style={{transitionDelay: `${id * 0.1}s`, transform:(toggleClicked)?"translateX(0%)":"translateX(100%)"}} key={id} id={name=="categories"?"dropdown-first":""} onMouseOver={(name!="categories" || width > 1024)?()=>hoveredTrue(name):()=>{}} onMouseLeave={(name!="categories" || width > 1024)?()=>hoveredFalse(name):()=>{}}>
+                            <li className="link-list-item" onClick={(width < 1024 && name!="categories")?updateToggling:()=>{}} style={{transitionDelay: `${id * 0.1}s`, transform:(toggleClicked)?"translateX(0%)":"translateX(100%)"}} key={id} id={name=="categories"?"dropdown-first":""} onMouseOver={(name!="categories" || width > 1024)?()=>hoveredTrue(name):()=>{}} onMouseLeave={(name!="categories" || width > 1024)?()=>hoveredFalse(name):()=>{}}>
                                 
                                 {
                                     name!="categories"?
                                 <Link to={linkToValue}>
-                                    <span className="small-font">
+                                    <span className="small-font" style={{display: "block"}}>
                                         {name}
                                     </span>
                                 </Link> :
-                                <span className="small-font" style={{marginBottom: (hoveredSubmenu && width<1024)?"1rem":"0"}}>
+                                <span className="small-font" style={{marginBottom: (hoveredSubmenu && width<1024)?"1rem":"0", display: "block"}} onClick={()=>menuItemClicked(name)}>
                                 {name}
                             </span>
                                 }

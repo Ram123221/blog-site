@@ -1029,6 +1029,13 @@ section.middle-two-section{
         }
     }
 
+    //single post page
+    #single-post{
+        max-width: unset !important;
+        padding: 0 3rem;
+        gap: 10rem;
+    }
+
     //about page
     #about{
 
