@@ -22,6 +22,13 @@ function Navbar() {
             setHoveredDeepmenu(false);
     };
 
+    const menuItemClicked = (name:string)=>{
+        if(name== "categories")
+            setHoveredSubmenu(!hoveredSubmenu);
+        else if(name== "Deep Drop Down")
+            setHoveredDeepmenu(!hoveredDeepmenu);
+    };
+
     //responsive navbar for smaller screen handling
     const [width, setWidth] = useState<number>(0);
 
@@ -37,9 +44,9 @@ function Navbar() {
             const winWidth = window.innerWidth;
             setWidth(winWidth);
 
-            if(winWidth >= 1024 || (winWidth < 1024 && toggleClicked))
+            if(winWidth >= 1024)
                 setToggleClicked(true);
-            else if(winWidth < 1024 && !toggleClicked)
+            else if(winWidth < 1024)
             {
                 console.log("small")
                 setToggleClicked(false);
@@ -54,10 +61,6 @@ function Navbar() {
         console.log(width);
         console.log(toggleClicked)
     }, [width, toggleClicked]);
-
-
-
-
 
 
   return (
@@ -98,13 +101,19 @@ function Navbar() {
                         };
 
                         return (
-                            <li className="link-list-item" onClick={width < 1024?updateToggling:()=>{}} style={{transitionDelay: `${id * 0.1}s`, transform:(toggleClicked)?"translateX(0%)":"translateX(100%)"}} key={id} id={name=="categories"?"dropdown-first":""} onMouseOver={()=>hoveredTrue(name)} onMouseLeave={()=>hoveredFalse(name)}>
+                            <li className="link-list-item" onClick={(width < 1024 && name!="categories")?updateToggling:()=>menuItemClicked(name)} style={{transitionDelay: `${id * 0.1}s`, transform:(toggleClicked)?"translateX(0%)":"translateX(100%)"}} key={id} id={name=="categories"?"dropdown-first":""} onMouseOver={(name!="categories" || width > 1024)?()=>hoveredTrue(name):()=>{}} onMouseLeave={(name!="categories" || width > 1024)?()=>hoveredFalse(name):()=>{}}>
                                 
-                                <Link to={linkToValue} style={{marginBottom: (name=="categories" && hoveredSubmenu && width<1024)?"1rem":"0"}}>
+                                {
+                                    name!="categories"?
+                                <Link to={linkToValue}>
                                     <span className="small-font">
                                         {name}
                                     </span>
-                                </Link>
+                                </Link> :
+                                <span className="small-font" style={{marginBottom: (hoveredSubmenu && width<1024)?"1rem":"0"}}>
+                                {name}
+                            </span>
+                                }
 
                                 {name=="categories" && (
                                     <>
@@ -124,7 +133,7 @@ function Navbar() {
                                                     linkToValue = "/search-result";
                                                 
                                                 return (
-                                                    <li className="link-list-item" key={id} id={name=="Deep Drop Down"?"dropdown-deep":''} onMouseOver={()=>hoveredTrue(name)} onMouseLeave={()=>hoveredFalse(name)}>
+                                                    <li className="link-list-item" key={id} id={name=="Deep Drop Down"?"dropdown-deep":''} onMouseOver={(name!="Deep Drop Down" || width > 1024)?()=>hoveredTrue(name):()=>{}} onMouseLeave={(name!="Deep Drop Down" || width > 1024)?()=>hoveredFalse(name):()=>{}} onClick={()=>menuItemClicked(name)}>
 
                                                     <Link to={linkToValue} style={{marginBottom: (hoveredDeepmenu && name=="Deep Drop Down" && width<1024)?"1rem":0}}>
                                                         <span className="small-font">

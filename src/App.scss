@@ -247,6 +247,35 @@ section.middle-two-section{
     
     #foot-head{
         margin: 5rem 0rem ; 
+
+        .small-desc{
+
+            span{
+                font-size: 1.7rem;
+            }
+    
+            p{
+                letter-spacing: 0.03rem;
+                color: $light-grey;
+            }
+        }
+
+
+        & > span > a{
+            color: $light-grey !important;
+        }
+
+        & > span > a::after{
+            background-color: $light-grey;
+        }
+
+        & > span:hover >a{
+            color: $white !important;
+        }
+        
+        & > span:hover > a::after{
+            background-color: white !important;
+        }
     }
     
     h3{
@@ -266,6 +295,12 @@ section.middle-two-section{
                 padding: 0.5rem;
                 display: flex;
                 align-items: center;
+                color: $light-grey;
+                cursor: pointer;
+
+                &:hover{
+                    color: $white;
+                }
                 
                 span{
                     display: flex;
@@ -295,6 +330,7 @@ section.middle-two-section{
             column-gap: 1.5rem;
             margin-bottom: 1.5rem;
             max-width: 75%;
+            cursor: pointer;
             
             img{
                 display: block;
@@ -310,6 +346,11 @@ section.middle-two-section{
             }
             div.title{
                 margin-top: -2.5rem;
+                color: $light-grey;
+
+                &:hover{
+                    color: $white;
+                }
             }
         }
     }
@@ -337,6 +378,11 @@ section.middle-two-section{
                 border-radius: 50%;
                 background-color: rgb(35, 34, 34);
                 margin-right: 0.5rem;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: $bright-black;
+                }
             }
         }
     }
@@ -443,25 +489,20 @@ section.middle-two-section{
                 font-variant: small-caps;
 
                 h1{
+                    cursor: pointer;
                 }
-                
-                h1.active-title::after{
-                    margin-top: 0.3rem;
-                    content: "";
-                    width: 100%;
-                    display: block;
-                    height: 1.75px;
-                    border-radius: 1px;
-                    background-color: black;
 
-                }
+            }
+
+            #PDL-grid-container{
+                width: 100%;
+                overflow: hidden;
             }
 
             #PDL-grid{
                 display: grid;
                 grid-template-columns: repeat(3,100%);
-                transition: transform 2s ease-in-out;
-                // transform: translateX(-100%);
+                transition: transform 0.5s ease-in-out;
                 // overflow: hidden;
 
                 & > * > *{
@@ -503,6 +544,10 @@ section.middle-two-section{
                     @include list-div;
                     border-bottom: 2px solid $grey-white;
 
+                    &:hover{
+                        color: $bright-black;
+                    }
+
                 }
             }
         }
@@ -519,6 +564,12 @@ section.middle-two-section{
                     padding: 1rem;
                     margin-right: 0.4rem;
                     margin-bottom: 0.4rem;
+                    transition: all 0.4s;
+
+                    &:hover{
+                        border-color: $bright-black;
+                        color: $bright-black;
+                    }
                 }
             }
         }
@@ -531,6 +582,18 @@ section.middle-two-section{
 
 
     }
+
+}
+
+//for line below text
+.active-title::after{
+    margin-top: 0.3rem;
+    content: "";
+    width: 100%;
+    display: block;
+    height: 1.75px;
+    border-radius: 1px;
+    background-color: black;
 
 }
 
@@ -615,6 +678,150 @@ section.middle-two-section{
         padding: 2rem;
         padding-top: 1rem;
         box-shadow: 0 0 20px $transparent;
+
+        input[type="submit"]{
+            margin-left: auto;
+            margin-right: auto;
+            text-transform: capitalize;
+            cursor: pointer;
+
+            &:hover{
+                background-color: $bright-black;
+                border-color: $bright-black;
+                outline: $bright-black;
+            }
+        }
+    }
+}
+
+//about us page 
+#about{
+    padding: unset;
+
+    #top-about{
+        padding: 5rem 3rem 1rem;
+
+        h1{
+            text-align: center;
+            font-size: 5rem;
+        }
+
+        .about-grid{
+            
+            .about-info{
+                margin: 5rem 0 8rem;
+
+                img{
+
+                }
+
+                div{
+
+                    h4{
+                        color: $grey-dark;
+                        text-transform: uppercase;
+                        padding-top: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .about-grid{
+
+        .about-info{
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    #latest-news{
+        background-color: $grey-white;
+        padding: 4rem 3rem 6.5rem;
+
+        .active-title{
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            width: max-content;
+        }
+
+        .active-title::after{
+            height: 3px;
+            border-radius: 3.5px;
+        }
+
+        #about-img-container{
+            padding: 3rem 0 0;
+            display: grid;
+            grid-template-columns: 47.5% 47.5%;
+            column-gap: 5%;
+
+            img{
+                width: 100%;
+            }
+
+            img:last-child{
+                margin-top: 3rem;
+            }
+        }
+    }
+
+    #our-team{
+        text-align: center;
+        padding: 7rem 0;
+
+        .small-about-sec{
+            max-width: 500px;
+            margin: auto;
+        }
+
+        #team-grid{
+
+            .staff-info{
+                margin-top: 6rem;
+
+                img{
+                    width: 22rem;
+                    height: 22rem;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+
+                h1{
+                    padding: 2rem 0 0.5rem;
+                }
+
+                span{
+                    text-transform: uppercase;
+                    font-size: 1.45rem;
+                }
+
+                p{
+                    padding-top: 1.7rem;
+                }
+            }
+        }
+
+
+    }
+}
+
+//global for about us page
+
+.small-about-sec{
+
+    span{
+        display: block;
+        margin: 0.5rem 0 3rem;
+        text-transform: capitalize;
+    }
+
+    p{
+        font-size: 1.6rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
     }
 }
 
@@ -667,6 +874,52 @@ section.middle-two-section{
             & > *:not(& > *:last-child)
             {
                 border-right: 3px solid $grey-white;
+            }
+        }
+    }
+
+    //about page
+    #about{
+
+        #top-about{
+
+            .about-grid{
+
+                .about-info{
+                    display: grid;
+                    grid-template-columns: 55% auto;
+                    gap: 7rem;
+
+                    h4{
+                        padding: unset !important;
+                    }
+                }
+
+                .about-info:last-child{
+                    grid-template-columns: auto 55%;
+
+                    img{
+                        grid-column: 2 /3;
+                    }
+
+                    div{
+                        grid-row: 1 / 2;
+                    }
+                }
+            }
+        }
+    }
+
+    #our-team{
+
+        #team-grid{
+
+            .staff-info{
+
+                img{
+                    width: 30rem !important;
+                    height: 30rem !important;
+                }
             }
         }
     }
@@ -772,6 +1025,39 @@ section.middle-two-section{
 
             #foot-links{
                 column-gap: 7rem;
+            }
+        }
+    }
+
+    //about page
+    #about{
+
+        #latest-news{
+
+            .about-grid{
+                display: grid;
+                grid-template-columns: 45% 45%;
+                gap: 10%;
+            }
+        }
+    }
+
+    
+    #our-team{
+        padding: 8rem 5rem 0 !important;
+
+        #team-grid{
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(3, auto);
+            gap: 3rem;
+
+            .staff-info{
+
+                img{
+                    width: 17.5rem !important;
+                    height: 17.5rem !important;
+                }
             }
         }
     }

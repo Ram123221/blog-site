@@ -4,10 +4,28 @@ import ImgParas from "../SharedComponents/ImgParas";
 import Comment_Reply from "../SharedComponents/Comment_Reply";
 import Form from "../SharedComponents/Form";
 import { FaAngleRight } from "react-icons/fa";
+import { useState } from "react";
 
 function SinglePost() {
   const {single_post_top,img_paras, comments, replies, form, pop_trend_lat} = single_post;
   const {popular, trending, latest, categories_tags} = pop_trend_lat;
+
+  const [translateLetter, setTranslateLetter] = useState<string>("");
+
+  const translate = (val:string) =>{
+      switch(val){
+        case "p":
+          setTranslateLetter("p");
+          break;
+        case "t":
+          setTranslateLetter("t");
+          break;
+        case "l":
+          setTranslateLetter("l");
+          break;
+      }
+  };
+
   return (
     <div id="single-post">
       <div id="single-post-left">
@@ -56,33 +74,36 @@ function SinglePost() {
     <div id="single-post-right">
       <div id="pop-trend-lat">
           <header id="pop-trend-lat-head">
-            <h1 className="active-title">popular</h1>
-            <h1>trending</h1>
-            <h1>latest</h1>
+            <h1 className={translateLetter=="p"?"active-title":""} onClick={()=>translate("p")}>popular</h1>
+            <h1 className={translateLetter=="t"?"active-title":""} onClick={()=>translate("t")}>trending</h1>
+            <h1 className={translateLetter=="l"?"active-title":""} onClick={()=>translate("l")}>latest</h1>
           </header>
           {/*PDL is pop trend lates*/}
-          <div id="PDL-grid">
-            <div id="popular">
-              {popular.map((pop,i)=>{
-                return (
-                  <CategoryDatePlusQuote part={pop} key={i} />
-                )
-              })}
+          <div id="PDL-grid-container">
+            <div id="PDL-grid" style={{transform: (translateLetter == "p")?"translateX(0%)":translateLetter=="t"?"translateX(-100%)":"translateX(-200%)"}}>
+              <div id="popular">
+                {popular.map((pop,i)=>{
+                  return (
+                    <CategoryDatePlusQuote part={pop} key={i} />
+                  )
+                })}
+              </div>
+              <div id="trending">
+                {trending.map((pop,i)=>{
+                  return (
+                    <CategoryDatePlusQuote part={pop} key={i} />
+                  )
+                })}
+              </div>
+              <div id="latest">
+                {latest.map((pop,i)=>{
+                  return (
+                    <CategoryDatePlusQuote part={pop} key={i} />
+                  )
+                })}
+              </div>
             </div>
-            <div id="trending">
-              {trending.map((pop,i)=>{
-                return (
-                  <CategoryDatePlusQuote part={pop} key={i} />
-                )
-              })}
-            </div>
-            <div id="latest">
-              {latest.map((pop,i)=>{
-                return (
-                  <CategoryDatePlusQuote part={pop} key={i} />
-                )
-              })}
-            </div>
+
           </div>
       </div>
 

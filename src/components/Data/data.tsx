@@ -784,7 +784,94 @@ export const single_post = {
 };
 
 //about page
+export interface small_sec_type{
+    sub_topic: string,
+    paragraphs: string[]
+};
 
+export const about={
+    about_top:[
+        {
+            topic: "about us",
+            small_sec:{
+                sub_topic: "company history",
+                paragraphs: [
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!",
+                    "Fugit eaque illum blanditiis, quo exercitationem maiores autem laudantium unde excepturi dolores quasi eos vero harum ipsa quam laborum illo aut facere voluptates aliquam adipisci sapiente beatae ullam. Tempora culpa iusto illum accusantium cum hic quisquam dolor placeat officiis eligendi."
+                ]
+            },
+            img_url: "./post-landscape-2.jpg"
+        },
+        {
+            topic: "mission & vision",
+            small_sec:{
+                sub_topic: "mission & vision",
+                paragraphs: [
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!",
+                    "Fugit eaque illum blanditiis, quo exercitationem maiores autem laudantium unde excepturi dolores quasi eos vero harum ipsa quam laborum illo aut facere voluptates aliquam adipisci sapiente beatae ullam. Tempora culpa iusto illum accusantium cum hic quisquam dolor placeat officiis eligendi."
+                ]
+            },
+            img_url: "./post-landscape-1.jpg"
+        }
+    ],
+    latest_news:{
+        small_sec:{
+            sub_topic: "latest news",
+            paragraphs: [
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!",
+                "Fugit eaque illum blanditiis, quo exercitationem maiores autem laudantium unde excepturi dolores quasi eos vero harum ipsa quam laborum illo aut facere voluptates aliquam adipisci sapiente beatae ullam. Tempora culpa iusto illum accusantium cum hic quisquam dolor placeat officiis eligendi."
+            ]
+        },
+        view_all: "view all blog posts",
+        img_urls:["./post-portrait-3.jpg", "./post-portrait-4.jpg"]
+    },
+    team: {
+        small_sec:{
+            sub_topic: "company history",
+            paragraphs: [
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!",
+            ]
+        },
+        members:[
+            {
+                img_url:"./person-1.jpg",
+                name: "Cameron Williamson",
+                post: "founder & ceo",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!"
+            },
+            {
+                img_url:"./person-4.jpg",
+                name: "Wade Warrem",
+                post: "founder,Vp",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!"
+            },
+            {
+                img_url:"./person-1.jpg",
+                name: "Jane Cooper",
+                post: "editor staff",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!"
+            },
+            {
+                img_url:"./post-landscape-8.jpg",
+                name: "Cameron Williamson",
+                post: "founder & ceo",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!"
+            },
+            {
+                img_url:"./person-1.jpg",
+                name: "Cameron Williamson",
+                post: "founder & ceo",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!"
+            },
+            {
+                img_url:"./post-slide-4.jpg",
+                name: "Cameron Williamson",
+                post: "founder & ceo",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!"
+            }
+        ]
+    }
+};
 
 //categories page
 
