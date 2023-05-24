@@ -51,7 +51,7 @@ function Navbar() {
                 setToggleClicked(false);
             }
         };
-
+        updateWindowWidth();
         window.addEventListener("load", updateWindowWidth);
         window.addEventListener("resize",updateWindowWidth);
     },[]);
