@@ -1,9 +1,15 @@
 import PopLatTrend from "../SinglePost/PopLatTrend";
 import BigImgText from "../SharedComponents/BigImgText";
 import { search_result } from "../../Data/data";
+import { useEffect } from "react";
 
 function SearchResult() {
   const {imgs_texts} = search_result;
+  
+    //to go to top of page each time component renders
+  useEffect(()=>{
+      window.scrollTo(0,0);
+  },[])
 
   return (
     <section id="search-result">

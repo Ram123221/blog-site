@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import { contact_subpart_type, contact } from "../../Data/data";
 import Form from "../SharedComponents/Form";
 
 function Contact() {
   const {address, phone_num, email, form} = contact;
+
+    //to go to top of page each time component renders
+  useEffect(()=>{
+      window.scrollTo(0,0);
+  },[])
 
   return (
     <div id="contact">

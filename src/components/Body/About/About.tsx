@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import { about } from "../../Data/data";
 import TopicParas from "../SharedComponents/TopicParas";
 
 function About() {
   const {about_top, latest_news:{small_sec, view_all, img_urls}, team} = about;
+  
+  //to go to top of page each time component renders
+  useEffect(()=>{
+      window.scrollTo(0,0);
+  },[])
 
   return (
     <section id="about">

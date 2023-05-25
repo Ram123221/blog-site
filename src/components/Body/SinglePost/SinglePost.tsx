@@ -4,9 +4,15 @@ import ImgParas from "../SharedComponents/ImgParas";
 import Comment_Reply from "../SharedComponents/Comment_Reply";
 import Form from "../SharedComponents/Form";
 import PopLatTrend from "./PopLatTrend";
+import { useEffect } from "react";
 
 function SinglePost() {
   const {single_post_top,img_paras, comments, replies, form} = single_post;
+
+    //to go to top of page each time component renders
+  useEffect(()=>{
+      window.scrollTo(0,0);
+  },[]) 
 
   return (
     <div id="single-post">
